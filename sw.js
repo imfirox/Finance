@@ -1,5 +1,5 @@
 // Keeps the app working offline. Page loads try the network first so updates arrive, then fall back to the saved copy.
-var CACHE = 'finance-manager-v1';
+var CACHE = 'finance-manager-v3';
 var SHELL = ['./', 'index.html', 'manifest.json', 'icon-192.png', 'icon-512.png', 'icon-maskable.png'];
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(SHELL); }).then(function () { return self.skipWaiting(); }));
